@@ -70,6 +70,9 @@ $container->bind('Acme\Contracts\NotifyUser', 'Acme\TextMessageNotification');
 // Instantiate App
 $app = AppFactory::create();
 
+// Comment beneath line if we test at root domain
+$app->setBasePath('/components/container');
+
 // Middleware
 $app->add(new WhoopsMiddleware(['enable' => true]));
 
