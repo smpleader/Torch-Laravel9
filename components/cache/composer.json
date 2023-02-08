@@ -1,12 +1,12 @@
 {
     "require": {
-        "filp/whoops": "2.7.*",
-        "illuminate/cache": "^8.0",
-        "illuminate/container": "^8.0",
-        "illuminate/filesystem": "^8.0",
-        "illuminate/redis": "^8.0",
+        "filp/whoops": "2.14.*",
+        "illuminate/cache": "^9.0",
+        "illuminate/container": "^9.0",
+        "illuminate/filesystem": "^9.0",
+        "illuminate/redis": "^9.0",
         "predis/predis": "^1.1",
-        "slim/psr7": "1.2.*",
+        "slim/psr7": "1.6.*",
         "slim/slim": "4.*",
         "zeuxisoo/slim-whoops": "0.7.*"
     }
