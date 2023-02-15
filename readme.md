@@ -20,7 +20,7 @@ Now you can visit [http://localhost:8000/](http://localhost:8000/) in your brows
 ## Other usage
 
 I used a service port 8888 to pubish the site from the root. You can refer nginx config file in folder nginx.
-After web service publishment, we access the components example by:
+After web service publishment, we access the component examples by:
 
 ```
 localhost:8888/components/{packageName}
