@@ -17,30 +17,39 @@ $ php -S localhost:8000
 
 Now you can visit [http://localhost:8000/](http://localhost:8000/) in your browser to view the output of each.
 
+## Other usage
+
+I used a service port 8888 to pubish the site from the root. You can refer nginx config file in folder nginx.
+After web service publishment, we access the components example by:
+
+```
+localhost:8000/components/{packageName}
+```
+
 ## Packages
 
-### Ready for 8.0
+### Ready for 9.0
 
-* [Artisan Console](https://github.com/mattstauffer/Torch/tree/master/components/artisan)
-* [Cache](https://github.com/mattstauffer/Torch/tree/master/components/cache)
-* [Config](https://github.com/mattstauffer/Torch/tree/master/components/config)
-* [Container](https://github.com/mattstauffer/Torch/tree/master/components/container)
-* [Database](https://github.com/mattstauffer/Torch/tree/master/components/database)
-* [Encryption](https://github.com/mattstauffer/Torch/tree/master/components/encryption)
-* [Events](https://github.com/mattstauffer/Torch/tree/master/components/events)
-* [Filesystem](https://github.com/mattstauffer/Torch/tree/master/components/filesystem)
-* [HTTP Client](https://github.com/mattstauffer/Torch/tree/master/components/http)
-* [Log](https://github.com/mattstauffer/Torch/tree/master/components/log)
-* [Middleware](https://github.com/mattstauffer/Torch/tree/master/components/middleware)
-* [Pagination](https://github.com/mattstauffer/Torch/tree/master/components/pagination)
-* [Queue](https://github.com/mattstauffer/Torch/tree/master/components/queue)
-* [Routing](https://github.com/mattstauffer/Torch/tree/master/components/routing)
-* [Schedule](https://github.com/mattstauffer/Torch/tree/master/components/schedule)
-* [Session](https://github.com/mattstauffer/Torch/tree/master/components/session)
-* [Support](https://github.com/mattstauffer/Torch/tree/master/components/support)
-* [Translation](https://github.com/mattstauffer/Torch/tree/master/components/translation)
-* [View](https://github.com/mattstauffer/Torch/tree/master/components/view)
-* [Validation](https://github.com/mattstauffer/Torch/tree/master/components/validation)
+* [Artisan Console](https://github.com/smpleader/Torch-Laravel9/tree/master/components/artisan)
+* [Cache](https://github.com/smpleader/Torch-Laravel9/tree/master/components/cache)
+* [Config](https://github.com/smpleader/Torch-Laravel9/tree/master/components/config)
+* [Container](https://github.com/smpleader/Torch-Laravel9/tree/master/components/container)
+* [Database](https://github.com/smpleader/Torch-Laravel9/tree/master/components/database)
+* [Encryption](https://github.com/smpleader/Torch-Laravel9/tree/master/components/encryption)
+* [Events](https://github.com/smpleader/Torch-Laravel9/tree/master/components/events)
+* [Filesystem](https://github.com/smpleader/Torch-Laravel9/tree/master/components/filesystem)
+* [HTTP Client](https://github.com/smpleader/Torch-Laravel9/tree/master/components/http)
+* [Log](https://github.com/smpleader/Torch-Laravel9/tree/master/components/log)
+* [Middleware](https://github.com/smpleader/Torch-Laravel9/tree/master/components/middleware)
+* [Pagination](https://github.com/smpleader/Torch-Laravel9/tree/master/components/pagination)
+* [Queue](https://github.com/smpleader/Torch-Laravel9/tree/master/components/queue)
+* [Routing](https://github.com/smpleader/Torch-Laravel9/tree/master/components/routing)
+* [Schedule](https://github.com/smpleader/Torch-Laravel9/tree/master/components/schedule)
+* [Session](https://github.com/smpleader/Torch-Laravel9/tree/master/components/session)
+* [Support](https://github.com/smpleader/Torch-Laravel9/tree/master/components/support)
+* [Translation](https://github.com/smpleader/Torch-Laravel9/tree/master/components/translation)
+* [View](https://github.com/smpleader/Torch-Laravel9/tree/master/components/view)
+* [Validation](https://github.com/smpleader/Torch-Laravel9/tree/master/components/validation)
 
 
 ### Need to be moved over from 4.2
