@@ -23,7 +23,7 @@ I used a service port 8888 to pubish the site from the root. You can refer nginx
 After web service publishment, we access the components example by:
 
 ```
-localhost:8000/components/{packageName}
+localhost:8888/components/{packageName}
 ```
 
 ## Packages
