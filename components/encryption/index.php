@@ -18,6 +18,8 @@ require_once 'vendor/autoload.php';
 
  // Instantiate App
  $app = AppFactory::create();
+ // Comment beneath line if we test at root domain
+ $app->setBasePath('/components/encryption');
 
  // Middleware
  $app->add(new WhoopsMiddleware(['enable' => true]));
