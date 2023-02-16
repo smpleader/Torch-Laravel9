@@ -19,11 +19,14 @@ require_once 'vendor/autoload.php';
  * @contributor Robin Malfait
  */
 
- // Instantiate App
- $app = AppFactory::create();
+// Instantiate App
+$app = AppFactory::create();
 
- // Middleware
- $app->add(new WhoopsMiddleware(['enable' => true]));
+// Comment beneath line if we test at root domain
+$app->setBasePath('/components/translation');
+
+// Middleware
+$app->add(new WhoopsMiddleware(['enable' => true]));
 
 $app->get('/', function (Request $request, Response $response) {
     // Prepare the FileLoader
