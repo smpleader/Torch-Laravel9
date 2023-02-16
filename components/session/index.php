@@ -30,11 +30,14 @@ require_once 'vendor/autoload.php';
 * @contributor Jordon Brill
 */
 
- // Instantiate App
- $app = AppFactory::create();
+// Instantiate App
+$app = AppFactory::create();
 
- // Middleware
- $app->add(new WhoopsMiddleware(['enable' => true]));
+// Comment beneath line if we test at root domain
+$app->setBasePath('/components/session');
+
+// Middleware
+$app->add(new WhoopsMiddleware(['enable' => true]));
 
 // Init the container
 $container = new Container;
@@ -83,7 +86,7 @@ $app->get('/', function (Request $request, Response $response) use ($container) 
         $response->getBody()->write('Not set');
     }
 
-    $response->getBody()->write('<hr><a href="/set">Set session variable</a>');
+    $response->getBody()->write('<hr><a href="set">Set session variable</a>');
 
     return $response;
 });
@@ -110,7 +113,7 @@ $app->get('/set', function (Request $request, Response $response) use ($containe
         $container['session']->getId(),
         time() + ($container['config']['session.lifetime'] * 60),
         '/',
-        null,
+        '',
         false
     );
 
@@ -122,7 +125,7 @@ $app->get('/set', function (Request $request, Response $response) use ($containe
         $cookie->getDomain()
     );
 
-    $response->getBody()->write('<hr><a href="/">View current value of session variable</a>');
+    $response->getBody()->write('<hr><a href="./">View current value of session variable</a>');
 
     return $response;
 });
