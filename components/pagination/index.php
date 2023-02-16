@@ -33,6 +33,9 @@ use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;
 // Instantiate App
 $app = AppFactory::create();
 
+// Comment beneath line if we test at root domain
+$app->setBasePath('/components/pagination');
+
 // Middleware
 $app->add(new WhoopsMiddleware(['enable' => true]));
 
