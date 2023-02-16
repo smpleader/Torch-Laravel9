@@ -17,6 +17,9 @@ date_default_timezone_set('America/Detroit');
 // Instantiate App
 $app = AppFactory::create();
 
+ // Comment beneath line if we test at root domain
+ $app->setBasePath('/components/log');
+ 
 // Middleware
 $app->add(new WhoopsMiddleware(['enable' => true]));
 
