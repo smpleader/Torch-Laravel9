@@ -36,6 +36,9 @@ require_once '../../src/ExceptionHandler.php';
 // Instantiate App
 $app = AppFactory::create();
 
+// Comment beneath line if we test at root domain
+$app->setBasePath('/components/queue');
+
 // Middleware
 $app->add(new WhoopsMiddleware(['enable' => true]));
 
@@ -85,13 +88,13 @@ $container['queue'] = $queue->getQueueManager();
 
 $app->get('/', function (Request $request, Response $response) {
     $response->getBody()->write(implode('<br>', [
-        '<a href="/sync">sync</a>',
-        '<a href="/redis/add">Redis - Add</a>',
-        '<a href="/redis/work/worker">Redis - Do work as a worker</a>',
-        '<a href="/redis/work/single">Redis - Do work one-off</a>',
-        '<a href="/beanstalkd/add">Beanstalkd - Add</a>',
-        '<a href="/beanstalkd/work/worker">Beanstalkd - Do work as a worker</a>',
-        '<a href="/beanstalkd/work/single">Beanstalkd - Do work one-off</a>'
+        '<a href="sync">sync</a>',
+        '<a href="redis/add">Redis - Add</a>',
+        '<a href="redis/work/worker">Redis - Do work as a worker</a>',
+        '<a href="redis/work/single">Redis - Do work one-off</a>',
+        '<a href="beanstalkd/add">Beanstalkd - Add</a>',
+        '<a href="beanstalkd/work/worker">Beanstalkd - Do work as a worker</a>',
+        '<a href="beanstalkd/work/single">Beanstalkd - Do work one-off</a>'
     ]));
 
     return $response;
