@@ -1,4 +1,4 @@
-![Torch logo](https://raw.githubusercontent.com/mattstauffer/torch/master/torch-banner.png)
+![Torch logo](https://raw.githubusercontent.com/smpleader/torch-laravel9/master/torch-banner.png)
 
 # Torch - Using Laravel's Illuminate Components Independently
 
@@ -61,7 +61,7 @@ localhost:8888/components/{packageName}
 
 ### Done
 
-* [LaravelCollective/html](https://github.com/mattstauffer/Torch/tree/master/other-components/html)
+* [LaravelCollective/html](https://github.com/smpleader/torch-laravel9/tree/master/other-components/html)
 
 ## Contributing
 
