@@ -54,8 +54,8 @@ $scheduler = new \Illuminate\Console\Scheduling\ScheduleRunCommand();
 $scheduler->setLaravel($container);
 $input = new \Symfony\Component\Console\Input\ArrayInput([]);
 $output = new \Symfony\Component\Console\Output\BufferedOutput();
-$scheduler->setInput($input);
-$scheduler->setOutput(new \Illuminate\Console\OutputStyle($input, $output));
+
+$scheduler->run($input, $output);
 
 // run command without console application around
 $scheduler->handle(
