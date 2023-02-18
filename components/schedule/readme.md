@@ -4,7 +4,7 @@
 
 # Task Scheduling
 
-This component shows how to use Laravel's [Task Scheduling](https://laravel.com/docs/8.x/scheduling) features in non-Laravel applications.
+This component shows how to use Laravel's [Task Scheduling](https://laravel.com/docs/9.x/scheduling) features in non-Laravel applications.
 
 ## Usage
 

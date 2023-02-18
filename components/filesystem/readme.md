@@ -4,7 +4,7 @@
 
 # Filesystem
 
-This component shows how to use Laravel's [Filesystem](https://laravel.com/docs/8.x/filesystem) features in non-Laravel applications.
+This component shows how to use Laravel's [Filesystem](https://laravel.com/docs/9.x/filesystem) features in non-Laravel applications.
 
 ## Usage
 From this directory, run the following to serve a web site locally showing the output of the `index.php` file.
