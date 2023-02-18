@@ -20,6 +20,7 @@ Now you can visit [http://localhost:8000/](http://localhost:8000/) in your brows
 ## Other usage
 
 I used a service port 8888 to pubish the site from the root. You can refer nginx config file in folder nginx.
+In this repo, I also use 1 root URL to access all the components, then I register subpath for Laravel application.
 After web service publishment, we access the component examples by:
 
 ```
