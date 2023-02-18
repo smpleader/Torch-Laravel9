@@ -15,16 +15,26 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Pipeline;
 use Illuminate\Routing\Router;
+use Illuminate\Routing\Contracts\CallableDispatcher as CallableDispatcherContract;
+use Illuminate\Routing\CallableDispatcher;
 
 // Create new IoC Container instance
 $container = new Container;
+
+// Create a request from server variables
+$request = Request::capture();
+
+$container->instance('Illuminate\Http\Request', $request);
+$container->singleton(CallableDispatcherContract::class, function ($container) {
+    return new CallableDispatcher($container);
+}); 
 
 // Using Illuminate/Events/Dispatcher here (not required); any implementation of
 // Illuminate/Contracts/Event/Dispatcher is acceptable
 $events = new Dispatcher($container);
 
 // Create the router instance
-$router = new Router($events);
+$router = new Router($events, $container);
 
 // Global middlewares
 $globalMiddleware = [
@@ -44,9 +54,6 @@ foreach ($routeMiddleware as $key => $middleware) {
 
 // Load the routes
 require_once 'routes.php';
-
-// Create a request from server variables
-$request = Request::capture();
 
 // Dispatching the request:
 // When it comes to dispatching the request, you have two options:
